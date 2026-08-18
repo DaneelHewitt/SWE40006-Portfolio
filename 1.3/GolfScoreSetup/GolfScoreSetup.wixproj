@@ -1,0 +1,5 @@
+﻿<Project Sdk="WixToolset.Sdk/7.0.0">
+  <ItemGroup>
+    <ProjectReference Include="..\GolfScore\GolfScore.csproj" />
+  </ItemGroup>
+</Project>

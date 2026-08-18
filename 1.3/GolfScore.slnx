@@ -1,0 +1,15 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="ARM64" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="GolfScore.Scoring/GolfScore.Scoring.csproj" Id="ad2614c2-e2c2-458b-a54f-e726103c7933" />
+  <Project Path="GolfScore.Statistics/GolfScore.Statistics.csproj" Id="47c7a960-a273-46de-8318-24a77a0b0537" />
+  <Project Path="GolfScore/GolfScore.csproj" />
+  <Project Path="GolfScoreSetup/GolfScoreSetup.wixproj" Type="b7dd6f7e-def8-4e67-b5b7-07ef123db6f0">
+    <Platform Solution="Debug|Any CPU" Project="x64" />
+    <Platform Solution="Release|Any CPU" Project="x86" />
+  </Project>
+</Solution>
