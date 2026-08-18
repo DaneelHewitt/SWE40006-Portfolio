@@ -2,25 +2,44 @@
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
 
 	<Package
-    Name="SampleAppDaneelSetup"
-    Manufacturer="Daneel Hewitt"
-    Version="1.0.0"
-    UpgradeCode="95a175e6-55a9-4ee3-b2e4-0da3e23f4233">
+	  Name="GolfScore Setup"
+	  Language="1033"
+	  Version="1.0.0"
+	  Manufacturer="Daneel Hewitt"
+	  UpgradeCode="B689DFE3-01C8-4046-886C-C19D74E0808A">
+
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
 
 		<StandardDirectory Id="ProgramFilesFolder">
-			<Directory Id="INSTALLFOLDER" Name="SampleAppDaneel">
-				<Component Id="MainExecutable">
-					<File Source="$(var.SampleAppDaneel.TargetPath)" />
+			<Directory Id="INSTALLFOLDER" Name="GolfScore">
+
+				<Component Id="MainExecutable"
+						   Guid="219071E0-C6FB-45C2-A831-8A53A7B21BB2">
+
+					<File Id="GolfScoreEXE"
+			 Source="$(var.GolfScore.TargetDir)GolfScore.exe" />
+
+					<File Id="GolfScoreDLL"
+						  Source="$(var.GolfScore.TargetDir)GolfScore.dll" />
+
+					<File Id="GolfScoreDeps"
+						  Source="$(var.GolfScore.TargetDir)GolfScore.deps.json" />
+
+					<File Id="GolfScoreRuntimeConfig"
+						  Source="$(var.GolfScore.TargetDir)GolfScore.runtimeconfig.json" />
 				</Component>
+
 			</Directory>
 		</StandardDirectory>
 
-		<Feature Id="Main">
+		<Feature Id="ProductFeature"
+				 Title="GolfScore Setup"
+				 Level="1">
+
 			<ComponentRef Id="MainExecutable" />
+
 		</Feature>
 
 	</Package>
 
 </Wix>
-
