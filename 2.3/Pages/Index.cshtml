@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+
+<div class="text-center">
+    <h1>@Model.ApplicationName</h1>
+
+    <p>
+        Custom C# ASP.NET Core Web Application
+    </p>
+
+    <hr />
+
+    <h3>Application Information</h3>
+
+    <p><strong>Technology:</strong> @Model.Technology</p>
+
+    <p><strong>Framework:</strong> @Model.Framework</p>
+
+    <p>
+        <strong>Server Time:</strong>
+        @Model.ServerTime
+    </p>
+
+    <p>
+        <strong>Status:</strong> Application Running
+    </p>
+    <p>
+        <strong>Environment:</strong>
+        @Model.AppEnvironment
+    </p>
+</div>
